@@ -1,1 +1,3 @@
-console.log('git')
+function log(text){
+console.log(text)
+}
