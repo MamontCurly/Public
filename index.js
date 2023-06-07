@@ -1,5 +1,3 @@
-const header = { "content-type": "application/x-www-form-urlencoded; charset=UTF-8", "x-requested-with": "XMLHttpRequest" }
-
 const mamont = {
     queryToStr(obj) {
       return Object.entries(obj)
@@ -113,7 +111,7 @@ class Slaves{
     let finish
     for(let its_lhash of l_hash){
     await fetch(this.iframe.replace('index','api'), {
-      "headers": header,
+      "headers": { "content-type": "application/x-www-form-urlencoded; charset=UTF-8", "x-requested-with": "XMLHttpRequest" },
       "body": `notify=false&lhash=${its_lhash}&im_slave=391808834&system=true&method=info`,
       "method": "POST",
       })
